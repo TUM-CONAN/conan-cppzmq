@@ -1,17 +1,17 @@
-[Conan.io](https://conan.io) package for [zmq](https://github.com/zeromq/libzmq) project
+[Conan.io](https://conan.io) package for [cppzmq](https://github.com/zeromq/cppzmq) project
 
 ## For Users: Use this package
 
 ### Basic setup
 
-    $ conan install zmq/4.2.3@camposs/stable
+    $ conan install cppzmq/4.2.2@camposs/stable
 
 ### Project setup
 
 If you handle multiple dependencies in your project is better to add a *conanfile.txt*
 
     [requires]
-    zmq/4.2.3@camposs/stable
+    cppzmq/4.2.2@camposs/stable
 
     [generators]
     txt
@@ -38,7 +38,7 @@ The following command both runs all the steps of the conan file, and publishes t
 
 ## Upload
 
-    $ conan upload zmq/4.2.3@camposs/stable --all -r camp
+    $ conan upload cppzmq/4.2.2@camposs/stable --all -r camp
 
 ## License
 [LICENSE_TYPE](LICENSE)
