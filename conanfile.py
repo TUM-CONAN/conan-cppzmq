@@ -16,9 +16,9 @@ class ZMQConan(ConanFile):
     requires = "zmq/[>=4.2.2]@camposs/stable"
 
     def source(self):
-        extracted_dir = "zeromq-%s" % self.version
-        archive_name = "%s.tar.gz" % extracted_dir
-        source_url = "https://github.com/zeromq/cppzmq/releases/download/v%s/%s" % (self.version, archive_name)
+        extracted_dir = "cppzmq-%s" % self.version
+        archive_name = "%s.tar.gz" % self.version
+        source_url = "https://github.com/zeromq/cppzmq/archive/v%s" % (archive_name)
         tools.get(source_url)
         os.rename(extracted_dir, "sources")
 
