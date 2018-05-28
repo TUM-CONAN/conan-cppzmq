@@ -24,21 +24,17 @@ Note: It is recommended that you run conan install from a build directory and no
 
 ## For Packagers: Publish this Package
 
-The example below shows the commands used to publish to bincrafters conan repository. To publish to your own conan respository (for example, after forking this git repository), you will need to change the commands below accordingly.
+The example below shows the commands used to publish to campar conan repository. To publish to your own conan respository (for example, after forking this git repository), you will need to change the commands below accordingly.
 
 ## Build and package
 
 The following command both runs all the steps of the conan file, and publishes the package to the local system cache.  This includes downloading dependencies from "build_requires" and "requires" , and then running the build() method.
 
-    $ conan create camposs/stable
-
-## Add Remote
-
-    $ conan remote add camp "https://conan.campar.in.tum.de"
+    $ conan create . camposs/stable
 
 ## Upload
 
-    $ conan upload cppzmq/4.2.2@camposs/stable --all -r camp
+    $ conan upload cppzmq/4.2.2@camposs/stable --all -r camposs
 
 ## License
 [LICENSE_TYPE](LICENSE)
