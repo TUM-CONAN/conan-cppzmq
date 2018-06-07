@@ -1,5 +1,9 @@
 [Conan.io](https://conan.io) package for [cppzmq](https://github.com/zeromq/cppzmq) project
 
+## Add Remote
+
+    $ conan remote add camposs "https://conan.campar.in.tum.de/api/conan/conan-camposs"
+
 ## For Users: Use this package
 
 ### Basic setup
