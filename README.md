@@ -8,14 +8,14 @@
 
 ### Basic setup
 
-    $ conan install cppzmq/4.2.2@camposs/stable
+    $ conan install cppzmq/4.4.1@camposs/stable
 
 ### Project setup
 
 If you handle multiple dependencies in your project is better to add a *conanfile.txt*
 
     [requires]
-    cppzmq/4.2.2@camposs/stable
+    cppzmq/4.4.1@camposs/stable
 
     [generators]
     txt
@@ -38,7 +38,7 @@ The following command both runs all the steps of the conan file, and publishes t
 
 ## Upload
 
-    $ conan upload cppzmq/4.2.2@camposs/stable --all -r camposs
+    $ conan upload cppzmq/4.4.1@camposs/stable --all -r camposs
 
 ## License
 [LICENSE_TYPE](LICENSE)

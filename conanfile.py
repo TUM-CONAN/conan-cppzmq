@@ -7,13 +7,13 @@ import os
 
 class ZMQConan(ConanFile):
     name = "cppzmq"
-    version = "4.2.2"
+    version = "4.4.1"
     url = "https://github.com/ulricheck/conan-cppzmq"
     description = "CPP headers for ZeroMQ is a community of projects focused on decentralized messaging and computing"
     license = "https://github.com/someauthor/somelib/blob/master/LICENSES"
     exports_sources = ["LICENSE"]
     no_copy_source = True
-    requires = "zmq/[>=4.2.2]@camposs/stable"
+    requires = "zmq/4.3.2@camposs/stable"
 
     def source(self):
         extracted_dir = "cppzmq-%s" % self.version
