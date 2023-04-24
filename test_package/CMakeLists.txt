@@ -1,13 +1,18 @@
-project(test_package)
-cmake_minimum_required(VERSION 2.8.11)
+cmake_minimum_required(VERSION 3.15)
+cmake_policy(SET CMP0074 NEW)
 
+project(test_package CXX)
 set(CMAKE_VERBOSE_MAKEFILE TRUE)
 
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup()
+find_package(cppzmq REQUIRED CONFIG)
+find_package(ZeroMQ REQUIRED CONFIG)
 
-file(GLOB SOURCE_FILES *.cpp)
+ADD_EXECUTABLE(${PROJECT_NAME} test_package.cpp)
+TARGET_LINK_LIBRARIES(${PROJECT_NAME} PRIVATE cppzmq::cppzmq ZeroMQ::ZeroMQ)
 
-add_executable(${PROJECT_NAME} ${SOURCE_FILES})
-target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
-set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 11)
+set_target_properties(${PROJECT_NAME}
+    PROPERTIES
+    	CXX_STANDARD 11
+    	CXX_STANDARD_REQUIRED ON
+    	CXX_EXTENSIONS OFF
+)
